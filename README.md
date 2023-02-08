@@ -12,5 +12,5 @@
 
 ## Laboratory work tasks
 
-[Laboratory Work #1](https://github.com/Catalin-Tin/CS/blob/main/Project%20CS/REPORTS/lab1.md)
+[Laboratory Work #1](https://github.com/Catalin-Tin/PTR/blob/main/Scala/Lab%201/Lab1.scala)
 
