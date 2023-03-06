@@ -174,3 +174,27 @@ class TotalActor extends Actor {
   }
 }
 ```
+## P0W4 – The Actor is dead.. Long live the Actor
+Create a supervised pool of identical worker actors. The number of actors is static, given at initialization. Workers should be individually addressable. Worker actors should echo any message they receive. If an actor dies (by receiving a “kill” message), it should be restarted by the supervisor. Logging is welcome.
+1. First class called EchoActor prints the message that every actor gets and when the server restarts
+```
+  override def receive: Receive = {
+    case message => println(s"$message")
+  }
+
+  override def postRestart(reason: Throwable): Unit = {
+    println(s"Worker $self restarted")
+  }
+```
+2. SupervisorActors class distributes message to every actor using oneforonestrategy and sets exception for restart 
+```
+  override def receive: Receive = {
+    case message =>
+      println(s"Broadcasting some message to all workers: $message")
+      workers.foreach(worker => worker ! message)
+  }
+
+  override def supervisorStrategy: SupervisorStrategy = OneForOneStrategy() {
+    case _: Exception => SupervisorStrategy.Restart
+  }
+```
