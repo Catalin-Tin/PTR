@@ -13,3 +13,7 @@
 ## Laboratory work tasks
 
 [Laboratory Work #1](https://github.com/Catalin-Tin/PTR/blob/main/Scala/Lab%201/lab1.md)
+
+[Laboratory Work #2](https://github.com/Catalin-Tin/PTR/blob/main/Scala/lab%202/Lab2_PTR_Catalin_Tincu_FAF201%20(1).pdf)
+
+[Laboratory Work #3](https://github.com/Catalin-Tin/PTR/blob/main/Scala/Lab%203/lab3.md)
